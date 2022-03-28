@@ -8,3 +8,16 @@
   - Javascript
   - Mysql
 ## Funcionalidades do software
+  - Qualquer pessoa podera aunciar um produto
+  - Qualquer pessoa podera fazer pedidos
+  * Uma pessoa tem: 
+    - nome
+    - telefone
+    - email
+  * Um produto tem um:  
+    - nome
+    - detalhes
+    - valor
+    - codigo
+    - fotos ?
+
