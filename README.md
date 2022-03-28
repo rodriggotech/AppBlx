@@ -19,5 +19,11 @@
     - detalhes
     - valor
     - codigo
+    - disponivel
     - fotos ?
-
+  * Umpedido tem: 
+    - produto 
+    - uma pedido
+    - quantidade
+    - local de entrega
+    - observacoes
