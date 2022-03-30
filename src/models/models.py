@@ -1,33 +1,12 @@
-from pydantic import BaseModel
-from typing import Optional, List
+from sqlalchemy import Column, Interger, String, Float, Boolean
+from src.infra.sqlalchemy.config.database import Base
 
+class Produto(Base):
+    __tablename__ = 'produto'
 
-class Clientes(BaseModel):
-    id: Optional[str] = None
-    nome: str
-    telefone: str
-    meus_produtos: List[Produtos]
-    minhas_vendas: List[Pedidos]
-    meus_pedidos: List[Pedidos]
-
-class Produtos(BaseModel):
-    id: Optional[str] = None
-    nome: str
-    usuario: Usuario
-    detalhes: str
-    valor: float
-    codigo: int
-    disponivel: bool = False
-
-class Pedidos(BaseModel):
-    id: Optional[str] = None
-    usuario: Usuario
-    produto:Produtos 
-    quantidade: int
-    entrega: bool = True
-    endereco: str
-    observacos: Optional[str] = None
-
-
-
-
+    id = Column(Interger, primary_key=True, index=True)
+    nome = Column(String)
+    detalhes = Column(String)
+    preco = Column(Float)
+    disponivel = Column(Bolean)
+    codigo = Column(Interger)
