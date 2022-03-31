@@ -1,5 +1,5 @@
-from slqalschemy.orm import Session
-from src.schemes.schemes import schemes
+from sqlalchemy.orm import Session
+from src.schemes import schemes
 from src.infra.sqlalchemy.models import models
 
 class RepositorioProduto():
