@@ -21,7 +21,7 @@ class RepositorioProduto():
         return db_produto 
 
     def listar(self):
-        produtos = self.db.qurey(models.produto).all()
+        produtos = self.db.query(models.Produto).all()
         return produtos
 
     def obter(self):
