@@ -9,7 +9,7 @@ criar_db()
 app = FastAPI()
 
 @app.post('/produtos')
-def criar_produtos(produto: Produto, db: Session = Depends(get_db)):
+def criar_produto(produto: Produto, db: Session = Depends(get_db)):
     produtos_criado = RepositorioProduto(db).criar(produto)
     return produtos_criado 
 
