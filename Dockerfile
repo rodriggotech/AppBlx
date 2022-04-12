@@ -1,19 +1,12 @@
-# 
-FROM python:3
+FROM python:3.10
 
-# 
-WORKDIR /code
+COPY ./AppBlx /app/src
+COPY requirements.txt /app
 
-# 
-COPY ./requirements.txt /code/requirements.txt
+WORKDIR /app
 
+RUN pip3 install -r requirements.txt
 
-# 
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+EXPOSE 8000
 
-# 
-COPY ./AppBlx /code/Appblx
-
-# 
-CMD ["uvicorn", "src.server:app", "--host", "0.0.0.0", "--port", "80"]
-
+CMD ["uvicorn", "--host=0.0.0.0", "--reload"]

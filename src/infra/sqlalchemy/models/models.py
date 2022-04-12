@@ -9,3 +9,11 @@ class Produto(Base):
     preco = Column(Float)
     codigo = Column(Integer)
     disponivel = Column(Boolean)
+
+#se der error ta aqui, ou no repositorios que vou criar de usuario
+class Usuario(Base):
+    __tablename__ = 'clientes'
+
+    id = Column(Integer, primary_key=True, index=True)
+    nome = Column(String)
+    telefone = Column(String) 
